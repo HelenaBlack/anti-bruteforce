@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/HelenaBlack/anti-bruteforce/internal/domain" //nolint:depguard
-	"github.com/redis/go-redis/v9"                           //nolint:depguard
-	"github.com/stretchr/testify/assert"                     //nolint:depguard
-	"github.com/stretchr/testify/require"                    //nolint:depguard
+	"github.com/HelenaBlack/anti-bruteforce/internal/domain"
+	"github.com/redis/go-redis/v9"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 func TestRedisLimiter(t *testing.T) {

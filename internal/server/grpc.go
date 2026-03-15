@@ -3,8 +3,8 @@ package server
 import (
 	"context"
 
-	pb "github.com/HelenaBlack/anti-bruteforce/api/gen"   //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/app" //nolint:depguard
+	pb "github.com/HelenaBlack/anti-bruteforce/api/gen"
+	"github.com/HelenaBlack/anti-bruteforce/internal/app"
 )
 
 type GRPCServer struct {

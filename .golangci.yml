@@ -1,12 +1,28 @@
-version: "2"
 
 run:
   tests: true
 
 linters-settings:
   funlen:
-    lines: 150
+    lines: 120
     statements: 80
+  revive:
+    rules:
+      - name: exported
+  depguard:
+    rules:
+      main:
+        files:
+          - $all
+        allow:
+          - $gostd
+          - github.com/HelenaBlack/anti-bruteforce
+          - github.com/spf13/cobra
+          - google.golang.org/grpc
+          - github.com/lib/pq
+          - github.com/joho/godotenv
+          - github.com/stretchr/testify
+          - github.com/redis/go-redis/v9
 
 linters:
   disable-all: true

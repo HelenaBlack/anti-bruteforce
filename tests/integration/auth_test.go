@@ -5,11 +5,11 @@ import (
 	"testing"
 	"time"
 
-	pb "github.com/HelenaBlack/anti-bruteforce/api/gen" //nolint:depguard
-	"github.com/stretchr/testify/assert"                //nolint:depguard
-	"github.com/stretchr/testify/require"               //nolint:depguard
-	"google.golang.org/grpc"                            //nolint:depguard
-	"google.golang.org/grpc/credentials/insecure"       //nolint:depguard
+	pb "github.com/HelenaBlack/anti-bruteforce/api/gen"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 func TestIntegration_AuthFlow(t *testing.T) {

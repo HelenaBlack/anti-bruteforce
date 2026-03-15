@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/joho/godotenv" //nolint:depguard
+	"github.com/joho/godotenv"
 )
 
 type Config struct {

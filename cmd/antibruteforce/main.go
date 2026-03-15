@@ -9,14 +9,14 @@ import (
 	"os/signal"
 	"syscall"
 
-	pb "github.com/HelenaBlack/anti-bruteforce/api/gen"          //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/app"        //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/config"     //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/limiter"    //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/repository" //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/server"     //nolint:depguard
-	"github.com/redis/go-redis/v9"                               //nolint:depguard
-	"google.golang.org/grpc"                                     //nolint:depguard
+	pb "github.com/HelenaBlack/anti-bruteforce/api/gen"
+	"github.com/HelenaBlack/anti-bruteforce/internal/app"
+	"github.com/HelenaBlack/anti-bruteforce/internal/config"
+	"github.com/HelenaBlack/anti-bruteforce/internal/limiter"
+	"github.com/HelenaBlack/anti-bruteforce/internal/repository"
+	"github.com/HelenaBlack/anti-bruteforce/internal/server"
+	"github.com/redis/go-redis/v9"
+	"google.golang.org/grpc"
 )
 
 func main() {

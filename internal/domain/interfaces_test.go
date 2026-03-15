@@ -3,7 +3,7 @@ package domain
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert" //nolint:depguard
+	"github.com/stretchr/testify/assert"
 )
 
 func TestIsInSubnet(t *testing.T) {

@@ -7,10 +7,10 @@ import (
 	"os"
 	"time"
 
-	pb "github.com/HelenaBlack/anti-bruteforce/api/gen" //nolint:depguard
-	"github.com/spf13/cobra"                            //nolint:depguard
-	"google.golang.org/grpc"                            //nolint:depguard
-	"google.golang.org/grpc/credentials/insecure"       //nolint:depguard
+	pb "github.com/HelenaBlack/anti-bruteforce/api/gen"
+	"github.com/spf13/cobra"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 var (

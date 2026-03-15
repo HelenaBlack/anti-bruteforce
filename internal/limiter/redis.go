@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/HelenaBlack/anti-bruteforce/internal/domain" //nolint:depguard
-	"github.com/redis/go-redis/v9"                           //nolint:depguard
+	"github.com/HelenaBlack/anti-bruteforce/internal/domain"
+	"github.com/redis/go-redis/v9"
 )
 
 type RedisLimiter struct {

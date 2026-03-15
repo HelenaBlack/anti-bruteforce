@@ -3,8 +3,8 @@ package app
 import (
 	"context"
 
-	"github.com/HelenaBlack/anti-bruteforce/internal/config" //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/domain" //nolint:depguard
+	"github.com/HelenaBlack/anti-bruteforce/internal/config"
+	"github.com/HelenaBlack/anti-bruteforce/internal/domain"
 )
 
 type AntiBruteforceService struct {

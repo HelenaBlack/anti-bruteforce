@@ -5,10 +5,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/HelenaBlack/anti-bruteforce/internal/config" //nolint:depguard
-	"github.com/HelenaBlack/anti-bruteforce/internal/domain" //nolint:depguard
-	"github.com/stretchr/testify/assert"                     //nolint:depguard
-	"github.com/stretchr/testify/mock"                       //nolint:depguard
+	"github.com/HelenaBlack/anti-bruteforce/internal/config"
+	"github.com/HelenaBlack/anti-bruteforce/internal/domain"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/mock"
 )
 
 // Mocks.

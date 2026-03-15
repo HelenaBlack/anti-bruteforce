@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	_ "github.com/lib/pq" //nolint:depguard // postgres driver
+	_ "github.com/lib/pq" // postgres driver
 )
 
 const (
