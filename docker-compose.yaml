@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  protoc-all:
+    image: namely/protoc-all:latest
+    command:
+      -d /src/api/grpc/proto
+      -o /src/api/grpc/gen
+      -l go
+    volumes:
+      - ../:/src
+
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: antibruteforce
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d/
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+
+  app:
+    build: .
+    restart: always
+    environment:
+      APP_DB_DSN: "postgres://user:password@db:5432/antibruteforce?sslmode=disable"
+      APP_REDIS_ADDR: "redis:6379"
+      APP_LIMIT_N: 10
+      APP_LIMIT_M: 100
+      APP_LIMIT_K: 1000
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "50051:50051"
+
+volumes:
+  pgdata:

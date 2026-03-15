@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package antibruteforce;
+
+option go_package = "github.com/HelenaBlack/anti-bruteforce/api/gen;antibruteforce";
+
+service Antibruteforce {
+    rpc Check(CheckRequest) returns (CheckResponse);
+    rpc Reset(ResetRequest) returns (ResetResponse);
+    rpc AddToBlacklist(SubnetRequest) returns (SubnetResponse);
+    rpc RemoveFromBlacklist(SubnetRequest) returns (SubnetResponse);
+    rpc AddToWhitelist(SubnetRequest) returns (SubnetResponse);
+    rpc RemoveFromWhitelist(SubnetRequest) returns (SubnetResponse);
+}
+
+message CheckRequest {
+    string login = 1;
+    string password = 2;
+    string ip = 3;
+}
+
+message CheckResponse {
+    bool ok = 1;
+}
+
+message ResetRequest {
+    string login = 1;
+    string ip = 2;
+}
+
+message ResetResponse {
+    bool ok = 1;
+}
+
+message SubnetRequest {
+    string subnet = 1; // e.g. "192.1.1.0/24"
+}
+
+message SubnetResponse {
+    bool ok = 1;
+}
